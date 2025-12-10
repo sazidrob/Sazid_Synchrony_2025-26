@@ -5,7 +5,7 @@ export const Store = {
     document.documentElement.setAttribute("data-theme", t);
   },
   user: {
-    name: "Hishab Lamar",
+    name: "Kishab Shemar",
     age: 16,
     status: "High School Senior, broke",
     interests: ["sports","gaming","friends"],
