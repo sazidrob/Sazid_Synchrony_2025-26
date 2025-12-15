@@ -50,7 +50,8 @@ export function mountLoader(onDone){
     pos[i*3] = (Math.random()-.5)*30;
     pos[i*3+1]=(Math.random()-.5)*30;
     pos[i*3+2]=(Math.random()-.5)*30;
-  }
+  } 
+  // Assign positions to stars. Because I want you to j
   starsGeo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
   const stars = new THREE.Points(starsGeo, new THREE.PointsMaterial({ size: .03 }));
   scene.add(stars);
