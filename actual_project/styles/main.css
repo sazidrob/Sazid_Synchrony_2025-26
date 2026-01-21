@@ -74,3 +74,22 @@ body {
   .layout { grid-template-columns: 1fr; }
   .sidebar { position: relative; top: 0; }
 }
+
+
+.logo-text { 
+  text-shadow: 0 0 10px #7dd3fc55;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .layout { grid-template-columns: 200px 1fr; }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .topbar { padding: 10px 12px; }
+  .content { padding: 14px; }
+  .grid-2, .grid-3 { grid-template-columns: 1fr; }
+}
+
+body { font-family: "Orbitron", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial; }
