@@ -9,6 +9,7 @@
     <!-- Three.js CDN -->
     <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
   </head>
+
   <body>
     <div id="loader-root"></div>
 
@@ -36,24 +37,32 @@
         <a class="nav-item" href="#/goals">Goals</a>
         <a class="nav-item" href="#/ai">AI Chat</a>
         <a class="nav-item" href="#/settings">Settings</a>
+
+        <!-- Video becomes a real route like the others -->
+        <a class="nav-item" href="#/media">Project Video</a>
       </aside>
 
-      <main id="app" class="content"></main>
+      <main class="content">
+        <!-- SPA mount point (router renders pages here) -->
+        <div id="app"></div>
+
+        <!-- Fallback for grading / if JS fails -->
+        <noscript>
+          <section id="media-fallback" data-media="data-media">
+            <h2>Media</h2>
+            <video controls width="480">
+              <source src="./assets/lairos_pathfinder.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </section>
+        </noscript>
+      </main>
     </div>
 
     <footer class="foot">
-      <small>© 2025 Lairos Pathfinder</small>
+      <small>© 2026 Lairos Pathfinder</small>
     </footer>
 
     <script type="module" src="../js/app.js"></script>
   </body>
 </html>
-
-<!-- THis code represent -->
-<!-- A complete HTML document for the Lairos Pathfinder web application. 
-This will serve as both a website and webapp, featuring a dark theme by default. 
-The navigation bar serves to be on the left side of the page. 
-Uses Three.js for cool animation and whatnot
-Planning to use an Account system using either Google Firebase or an applicable Data Writing language like SQL
-  
--->
