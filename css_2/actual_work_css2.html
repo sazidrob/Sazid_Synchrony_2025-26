@@ -1,13 +1,293 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8" />
-    <title>Work</title>
-</head>
-<body>
-    <!-- <p>Please visit the link below to visit my main project, where we can find my project work along with completed requirments within it. I simply wanted to make sure that my project work stays neatly into one main folder.</p>
-    <a href="../actual_project/styles/main.css">Back to Home</a>
-    ***PLEASE CHECKS THE MAIN.CSS FILE WITHIN THE ACTUAL_PROJECT FOLDER TO SEE MY CSS WORK*** -->
-</body> -->
-</html>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lairos Pathfinder — AI-Powered Student & Career Guidance</title>
+  <meta name="description" content="Lairos Pathfinder helps students and future career aspirers with tools and AI-powered free guidance." />
 
+  <link rel="stylesheet" href="../css_2/work.css" />
+</head>
+
+<body>
+  <!-- Topbar -->
+  <header class="topbar">
+    <div class="brand">
+      <!-- Simple “logo” -->
+      <div aria-hidden="true" style="
+        width: 34px; height: 34px; border-radius: 12px;
+        background: color-mix(in lab, var(--accent) 25%, transparent);
+        box-shadow: inset 0 0 0 1px var(--ring), 0 12px 30px #00000033;">
+      </div>
+      <div>
+        <div class="logo-text">Lairos Pathfinder</div>
+        <div style="color:var(--muted); font-size:12px; margin-top:2px;">
+          Free AI guidance • Tools • Roadmaps
+        </div>
+      </div>
+    </div>
+
+    <div class="top-actions">
+      <button class="icon-btn" id="themeBtn" type="button" aria-label="Toggle theme">🌓</button>
+      <a class="pill-btn" href="#get-started">Get started</a>
+    </div>
+  </header>
+
+  <!-- Main layout -->
+  <main class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <nav aria-label="Primary">
+        <a class="nav-item" href="#overview">
+          <span>Overview</span><span style="color:var(--muted);">›</span>
+        </a>
+        <a class="nav-item" href="#tools">
+          <span>Tools</span><span style="color:var(--muted);">›</span>
+        </a>
+        <a class="nav-item" href="#guidance">
+          <span>AI Guidance</span><span style="color:var(--muted);">›</span>
+        </a>
+        <a class="nav-item" href="#paths">
+          <span>Career Paths</span><span style="color:var(--muted);">›</span>
+        </a>
+        <a class="nav-item" href="#get-started">
+          <span>Get Started</span><span style="color:var(--muted);">›</span>
+        </a>
+      </nav>
+
+      <div class="card" style="margin-top:12px;">
+        <h3>Quick status</h3>
+        <div class="list-row">
+          <span style="color:var(--muted);">Guidance</span>
+          <span class="tag">Free</span>
+        </div>
+        <div class="list-row">
+          <span style="color:var(--muted);">Roadmaps</span>
+          <span class="tag">Starter</span>
+        </div>
+        <div class="list-row">
+          <span style="color:var(--muted);">Tools</span>
+          <span class="tag">AI</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Content -->
+    <section class="content" id="overview">
+      <!-- Hero -->
+      <div class="card" style="padding:18px;">
+        <div class="grid grid-2" style="align-items:center;">
+          <div>
+            <h1 style="margin:0 0 8px; font-size:26px; letter-spacing:-0.02em;">
+              Find your path. Build your future.
+            </h1>
+            <p style="margin:0 0 14px; color:var(--muted); max-width:58ch;">
+              <strong style="color:var(--text);">Lairos Pathfinder</strong> is a blueprint platform that helps
+              students and future career aspirers discover goals, get AI-powered guidance, and use simple tools
+              to move forward — without paywalls.
+            </p>
+            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+              <a class="pill-btn" href="#get-started">Try the demo</a>
+              <a class="pill-btn" href="#tools" style="background: #ffffff0f;">Explore tools</a>
+            </div>
+          </div>
+
+          <div class="card" style="margin:0;">
+            <h3>What you get</h3>
+            <ul style="margin:0; padding-left:18px; color:var(--muted);">
+              <li>Career roadmaps + learning plans</li>
+              <li>Resume & interview practice prompts</li>
+              <li>Project ideas to prove skills</li>
+              <li>“Next step” guidance in plain English</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tools section -->
+      <div style="margin-top:14px;" id="tools">
+        <div class="grid grid-3">
+          <div class="card">
+            <h3>Resume Builder</h3>
+            <p style="margin:0; color:var(--muted);">
+              Turn your experiences into clean bullet points + ATS-friendly structure.
+            </p>
+            <div style="margin-top:10px; display:flex; gap:8px; flex-wrap:wrap;">
+              <span class="tag">Templates</span>
+              <span class="tag">Bullet rewrites</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Study Planner</h3>
+            <p style="margin:0; color:var(--muted);">
+              A simple weekly plan that adapts to your schedule and goals.
+            </p>
+            <div style="margin-top:10px; display:flex; gap:8px; flex-wrap:wrap;">
+              <span class="tag">Time blocks</span>
+              <span class="tag">Milestones</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Portfolio Projects</h3>
+            <p style="margin:0; color:var(--muted);">
+              Get realistic project ideas that match the skills employers want.
+            </p>
+            <div style="margin-top:10px; display:flex; gap:8px; flex-wrap:wrap;">
+              <span class="tag">Beginner → Advanced</span>
+              <span class="tag">Rubrics</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI Guidance section -->
+      <div style="margin-top:14px;" id="guidance" class="card">
+        <h3>AI-Powered Guidance (demo)</h3>
+
+        <div class="grid grid-2" style="margin-top:10px;">
+          <div>
+            <label style="display:block; color:var(--muted); margin-bottom:6px;">
+              What are you aiming for?
+            </label>
+            <input class="input" id="goal" placeholder="Example: I want to become a data analyst" />
+
+            <label style="display:block; color:var(--muted); margin:12px 0 6px;">
+              What’s your current level?
+            </label>
+            <select id="level">
+              <option>Beginner</option>
+              <option>Some experience</option>
+              <option>Intermediate</option>
+              <option>Advanced</option>
+            </select>
+
+            <div style="display:flex; gap:10px; margin-top:12px; flex-wrap:wrap;">
+              <button class="button" id="generateBtn" type="button">Generate next steps</button>
+              <button class="button ghost" id="clearBtn" type="button">Clear</button>
+            </div>
+
+            <p style="margin:12px 0 0; color:var(--muted); font-size:12px;">
+              Note: This is a presentation blueprint — output is mocked.
+            </p>
+          </div>
+
+          <div>
+            <label style="display:block; color:var(--muted); margin-bottom:6px;">
+              Suggested next steps
+            </label>
+            <div id="output" class="card" style="margin:0; min-height:140px;">
+              <p style="margin:0; color:var(--muted);">
+                Enter a goal and click <strong style="color:var(--text);">Generate</strong>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Paths section -->
+      <div style="margin-top:14px;" id="paths">
+        <div class="grid grid-2">
+          <div class="card">
+            <h3>Popular paths</h3>
+            <div class="list-row"><span>Software Developer</span><span class="tag">Roadmap</span></div>
+            <div class="list-row"><span>Data Analyst</span><span class="tag">Roadmap</span></div>
+            <div class="list-row"><span>UX Designer</span><span class="tag">Roadmap</span></div>
+            <div class="list-row"><span>Cybersecurity</span><span class="tag">Roadmap</span></div>
+          </div>
+
+          <div class="card">
+            <h3>Why it’s different</h3>
+            <p style="margin:0; color:var(--muted);">
+              Lairos Pathfinder focuses on “what to do next” — less overwhelm, more momentum.
+              It’s designed to be simple, fast, and beginner-friendly.
+            </p>
+            <div style="margin-top:10px; display:flex; gap:8px; flex-wrap:wrap;">
+              <span class="tag">No paywalls</span>
+              <span class="tag">Simple steps</span>
+              <span class="tag">Practical</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Get started -->
+      <div style="margin-top:14px;" id="get-started" class="card">
+        <h3>Get started</h3>
+        <p style="margin:0 0 12px; color:var(--muted);">
+          Pick a path, generate a plan, and build one small project this week.
+        </p>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="pill-btn" href="#guidance">Use AI guidance</a>
+          <a class="pill-btn" href="#tools" style="background:#ffffff0f;">Browse tools</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    © <span id="year"></span> Lairos Pathfinder — demo blueprint page
+  </footer>
+
+  <script>
+    // Theme toggle (matches your CSS: html[data-theme="light"])
+    const themeBtn = document.getElementById("themeBtn");
+    themeBtn?.addEventListener("click", () => {
+      const html = document.documentElement;
+      const next = html.getAttribute("data-theme") === "light" ? "dark" : "light";
+      html.setAttribute("data-theme", next);
+    });
+
+    // Demo "AI guidance" output (mocked)
+    const goal = document.getElementById("goal");
+    const level = document.getElementById("level");
+    const output = document.getElementById("output");
+    const generateBtn = document.getElementById("generateBtn");
+    const clearBtn = document.getElementById("clearBtn");
+
+    function escapeHtml(str) {
+      return (str || "").replace(/[&<>"']/g, (m) => ({
+        "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"
+      }[m]));
+    }
+
+    generateBtn?.addEventListener("click", () => {
+      const g = goal?.value?.trim() || "";
+      const lvl = level?.value || "Beginner";
+      const safeGoal = escapeHtml(g || "your goal");
+
+      const steps = [
+        `Define a 2-week target for ${safeGoal}.`,
+        `Pick 1 core skill to practice daily (${lvl} level).`,
+        `Build a tiny project to prove progress (ship something).`,
+        `Write 5 resume bullets based on what you built.`,
+        `Practice 3 interview questions related to ${safeGoal}.`
+      ];
+
+      output.innerHTML = `
+        <p style="margin:0 0 10px; color:var(--text);">
+          Here’s a quick plan for <strong>${safeGoal}</strong>:
+        </p>
+        <ol style="margin:0; padding-left:18px; color:var(--muted);">
+          ${steps.map(s => `<li>${escapeHtml(s)}</li>`).join("")}
+        </ol>
+      `;
+    });
+
+    clearBtn?.addEventListener("click", () => {
+      if (goal) goal.value = "";
+      if (output) {
+        output.innerHTML = `
+          <p style="margin:0; color:var(--muted);">
+            Enter a goal and click <strong style="color:var(--text);">Generate</strong>.
+          </p>
+        `;
+      }
+    });
+
+    // Footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
