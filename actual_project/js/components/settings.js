@@ -21,7 +21,22 @@ export default async function Settings(){
   const b = document.createElement('section'); b.className='card';
   b.innerHTML = `<h3>Account</h3>
     <p>Signed in as <strong>${Store.user.name}</strong></p>
-    <button class="button ghost">Manage Account</button>`;
+    <p class="tag">${Store.activeEmail}</p>
+    <div class="grid" style="margin-top:10px">
+      <input id="name" class="input" value="${Store.user.name || ''}" placeholder="Name">
+      <input id="status" class="input" value="${Store.user.status || ''}" placeholder="Status">
+      <input id="interests" class="input" value="${(Store.user.interests || []).join(', ')}" placeholder="Interests">
+      <button id="saveProfile" class="button">Save Profile</button>
+    </div>`;
+
+  b.querySelector('#saveProfile').onclick = async ()=>{
+    Store.user.name = b.querySelector('#name').value.trim() || Store.user.name;
+    Store.user.status = b.querySelector('#status').value.trim();
+    Store.user.interests = b.querySelector('#interests').value.split(',').map((item)=>item.trim()).filter(Boolean);
+    await Store.save();
+    b.querySelector('#saveProfile').textContent = 'Saved';
+    setTimeout(()=> b.querySelector('#saveProfile').textContent = 'Save Profile', 900);
+  };
 
   el.appendChild(a); el.appendChild(b); return el;
 }

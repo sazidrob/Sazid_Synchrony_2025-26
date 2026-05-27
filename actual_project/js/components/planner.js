@@ -19,9 +19,9 @@ export default async function Planner(){
       row.innerHTML = `<span>${p.text}</span>`;
       const right = document.createElement('div'); right.style.display='flex'; right.style.gap='6px';
       const tgl = document.createElement('button'); tgl.className='button ghost'; tgl.textContent = p.done? 'Undo':'Done';
-      tgl.onclick = ()=>{ p.done = !p.done; render(); };
+      tgl.onclick = ()=>{ p.done = !p.done; Store.save().catch(console.error); render(); };
       const del = document.createElement('button'); del.className='button ghost'; del.textContent='Delete';
-      del.onclick=()=>{ Store.planner = Store.planner.filter(x=>x.id!==p.id); render(); };
+      del.onclick=()=>{ Store.planner = Store.planner.filter(x=>x.id!==p.id); Store.save().catch(console.error); render(); };
       right.appendChild(tgl); right.appendChild(del); row.appendChild(right); wrap.appendChild(row);
     });
   };
@@ -29,6 +29,7 @@ export default async function Planner(){
   list.querySelector('#addBtn').onclick = ()=>{
     const inp = list.querySelector('#newTask'); if (!inp.value.trim()) return;
     Store.planner.push({ id: Date.now(), text: inp.value.trim(), done:false });
+    Store.save().catch(console.error);
     inp.value=''; render();
   };
 

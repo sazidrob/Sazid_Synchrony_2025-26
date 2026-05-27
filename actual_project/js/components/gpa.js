@@ -31,6 +31,8 @@ export default async function GPA(){
       const c = inputs[0], cr = inputs[1], g = inputs[2];
       return { name:c.value, credits: Number(cr.value||0), grade: g.value };
     }).filter(x=>x.credits>0);
+    Store.courses = r;
+    Store.save().catch(console.error);
     const pts = r.reduce((s,x)=> s + (GRADE_POINTS[x.grade]||0)*x.credits, 0);
     const creds = r.reduce((s,x)=> s + x.credits, 0);
     const gpa = creds? (pts/creds).toFixed(2): '0.00';

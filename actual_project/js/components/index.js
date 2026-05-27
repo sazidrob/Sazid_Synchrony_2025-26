@@ -6,3 +6,4 @@ export { default as Health } from './health.js';
 export { default as Goals } from './goals.js';
 export { default as AI } from './ai.js';
 export { default as Settings } from './settings.js';
+export { default as Auth } from './auth.js';

@@ -1,3 +1,5 @@
+import { Store } from "./state.js";
+
 const routes = {};
 export function route(path, component){ routes[path] = component; }
 export function startRouter(){
@@ -5,10 +7,19 @@ export function startRouter(){
   async function render(){
     const hash = location.hash || "#/dashboard";
     const key = hash.split("?")[0];
+    if(!Store.isAuthenticated && key !== "#/login"){
+      location.hash = "#/login";
+      return;
+    }
+    if(Store.isAuthenticated && key === "#/login"){
+      location.hash = "#/dashboard";
+      return;
+    }
     const view = routes[key] || routes["#/dashboard"];
     app.replaceChildren(await view());
   }
   window.addEventListener("hashchange", render);
+  window.addEventListener("authchange", render);
   render();
 }
 
