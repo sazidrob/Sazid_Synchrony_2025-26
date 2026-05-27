@@ -73,7 +73,7 @@ function isCreatorQuestion(message){
 
 async function handleChat(req, res){
   if(!process.env.GEMINI_API_KEY){
-    sendJson(res, 500, { error: 'Missing GEMINI_API_KEY in actual_project/.env.' });
+    sendJson(res, 500, { error: 'Missing GEMINI_API_KEY environment variable.' });
     return;
   }
 
